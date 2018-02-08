@@ -4,20 +4,49 @@
 <head>
   <meta charset="utf-8">
   <title>jQuery对象转换</title>
+  <!-- id是唯一的，每个id值在一个页面中只能使用一次。
+  如果多个元素分配了相同的id，将只匹配该id选择集合的第一个DOM元素。
+  但这种行为不应该发生;有超过一个元素的页面使用相同的id是无效的 -->
+  <style media="screen">
+    div {
+      width: 100px;
+      height: 90px;
+      float: left;
+      padding: 5px;
+      margin: 5px;
+      background-color: #eee;
+    }
+
+    p {
+      border: 1px solid #000;
+    }
+  </style>
   <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
 </head>
 
 <body>
-  <div>元素</div>
-  <div>元素</div>
-  <div>元素</div>
+  <div id="aaron">
+    <p id="aaron"></p>
+    <p>选中</p>
+  </div>
+  <div id="imooc">
+    <p id="imooc"></p>
+    <p>jQuery选中</p>
+  </div>
+  <div id="imooc">
+    <p id="imooc"></p>
+    <p>jQuery未选中</p>
+  </div>
+  <script type="text/javascript">
+    //通过原生方法处理
+    var div = document.getElementById('aaron');
+    div.style.border = '3px solid blue';
+  </script>
 
   <script type="text/javascript">
-    var div = document.getElementsByTagName('div');
-    // alert(div.length);
-    var $div = $(div);
-    var $first = $div.first();
-    $first.css('color', '#00f');
+    // 通过jQuery直接传入id
+    // id的唯一，只选择到了第一个匹配的id未imooc的div节点
+    $('#imooc').css('border', '3px solid #f00');
   </script>
 </body>
 
