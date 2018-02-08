@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery 02 第一个简单的jQuery程序</title>
+    <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <!-- 使用原生JS 语法 -->
+    <script type="text/javascript">
+      window.onload = function(){
+        // 通过原生JS语法获取id为imooc1的元素p
+        var p = document.getElementById('imooc1');
+        // 将元素p在html中的内容改变
+        p.innerHTML = 'P1 您好，通过慕课网学习jQuery才是最佳途径';
+        // 将元素p的内容颜色改为红色
+        p.style.color = 'red';
+      }
+    </script>
+
+    <!-- 使用jQuery的语法 -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        /*
+        * 通过jQuery语法获取id 为imooc2 的元素获取一个jQuery对象
+        * 调用该对象的html()方法更改内容
+        * 调用该对象的css()方法进行更改颜色样式
+        */
+        var $p = $("#imooc2");
+        $p.html('P2 您好，通过慕课网学习jQuery才是最佳途径').css('color', 'red');
+      });
+    </script>
+</head>
+<body>
+  <p id="imooc1"></p>
+  <p id="imooc2"></p>
+</body>
+</html>
