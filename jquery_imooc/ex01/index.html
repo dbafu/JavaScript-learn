@@ -2,10 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Jquery 01</title>
+    <title>Jquery 02 第一个简单的jQuery程序</title>
+    <style>
+      div{
+        padding: 8px 0;
+        font-size: 12px;
+        text-align: center;
+        border: 1px solid #888;
+      }
+    </style>
     <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("div").html("您好！ 通过慕课网才是学习jQuery的最佳途径。");
+      });
+    </script>
 </head>
 <body>
-    <script>alert($);</script>
+  <div></div>
 </body>
 </html>
