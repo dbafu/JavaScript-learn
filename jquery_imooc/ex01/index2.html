@@ -6,8 +6,16 @@
     <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
   </head>
   <body>
-<div>元素</div>
-<div>元素</div>
-<div>元素</div>
+    <div>元素</div>
+    <div>元素</div>
+    <div>元素</div>
+
+    <script type="text/javascript">
+      var $div = $('div');
+      var div = $div[0];
+      div.style.color = '#f00';
+      var div2 = $div.get(1);
+      div2.style.color = '#0f0';
+    </script>
   </body>
 </html>
