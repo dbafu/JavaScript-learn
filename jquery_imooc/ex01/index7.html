@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery</title>
+  <style media="screen">
+    div {
+      width: 100px;
+      height: 90px;
+      float: left;
+      padding: 5px;
+      margin: 5px;
+      background-color: #eee;
+    }
+
+    p {
+      border: 1px solid #000;
+    }
+  </style>
+  <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+  <div class="aaron">
+    <p class="aaron"></p>
+    <p>选中</p>
+  </div>
+  <div class="imooc">
+    <p class="imooc"></p>
+    <p>jQuery选中</p>
+  </div>
+  <div class="imooc">
+    <p class="imooc"></p>
+    <p>jQuery未选中</p>
+  </div>
+  <script type="text/javascript">
+    // 获取页面所有元素
+    var elements1 = document.getElementsByTagName('*');
+    for (var i = 0; i < divs.length; i++){
+      divs[i].style.border = '3px solid blue';
+    }
+  </script>
+
+  <script type="text/javascript">
+    // 获取页面所有元素
+    var elements2 = $('*');
+    // 原生与jQuery方法比较
+    // === 表示数据和类型都相等
+    if(elements2.length === elements1.length){
+      elements2.css('border', '3px solid #f00');
+    }
+  </script>
+</body>
+
+</html>
