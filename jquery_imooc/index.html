@@ -35,6 +35,24 @@
     // 并且设置颜色
     $('.div:has(span)').css('color', 'blue');
     </script>
+    <h3>:parent/:.empty</h3>
+    <div class="left">
+        <div class="aaron"><a href="">:parent</a></div>
+        <div class="aaron"><a href="">:parent</a></div>
+        <div class="aaron"><a href="">:parent</a></div>
+        <div class="aaron"><a href=""></a></div>
+    </div>
+    <script type="text/javascript">
+    //选择所有包含子元素或者文本的a元素
+    //增加一个蓝色的边框
+    $("a:parent").css("border", "3px groove blue");
+    </script>
+
+    <script type="text/javascript">
+       //找到a元素下面的所有空节点(没有子元素)
+       //增加一段文本与边框
+       $("a:empty").text(":empty").css("border", "3px groove red");
+    </script>
 </body>
 
 </html>
