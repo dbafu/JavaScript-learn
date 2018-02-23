@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="ex01/imooc.css">
+	<script src="jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	<h2>内容选择器</h2>
+	<h3>:contains/:has:</h3>
+	<div class="left">
+		<div class="div">
+			<p>:contains</p>
+		</div>
+		<div class="div">
+			<p>:contains</p>
+		</div>
+		<div class="div">
+			<p><span>:has</span></p>
+		</div>
+		<div class="div">
+			<p>:contains</p>
+		</div>
+	</div>
+
+	<script>
+		// 查找所有class='div' DOM 元素中包含“contains”的元素节点
+		// 并且设置颜色
+		$(".div:contains('contains')").css('color', '#cd00cd');
+	</script>
+
+	<script>
+		// 查找所有class='div' DOM 元素中包含“span”的元素节点
+		// 并且设置颜色
+		$('.div:has("span")').css(name, value)
+	</script>
+</body>
+</html>
