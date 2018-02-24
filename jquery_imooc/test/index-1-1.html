@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.11.3.js"></script>
+</head>
+<body>
+	<div class="div">div without event binded !</div>
+	<p>click me</p>
+	<script>
+		$('p').click(function(){
+			console.log('p is clicked !');
+			$('.div').click(function(){
+				console.log('div is binded click event and clicked !');
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-1.11.3.js"></script>
+</head>
+
+<body>
+    <div class="div">div without event binded !</div>
+    <p>click me</p>
+    <script>
+    $('p').click(function() {
+        console.log('p is clicked !');
+        $('p').click(function() {
+            console.log('p is binded click event and clicked second time!');
+        });
+    });
+    </script>
+    <div id="test">点击触发</div>
+    <script>
+    $("#test").mousedown(function() {
+        console.log('触发指定down事件')
+    });
+
+    $("#test").mouseup(function() {
+    	console.log('触发指定up事件')
+	});
+
+    // $("#test").mousedown(function() {
+    //     $("ele").mousedown() //手动指定触发事件 
+    // });
+    </script>
+</body>
+
+</html>
