@@ -7,6 +7,7 @@
     <style>
     .left div,
     .right div {
+<<<<<<< HEAD
         width: 300px;
         height: 80px;
         padding: 5px;
@@ -37,12 +38,48 @@
     $("button:eq(0)").click(function(e) {
         $('h2').mousemove() //指定触发绑定的事件
     })
+=======
+        width: 350px;
+        height: 150px;
+        padding: 5px;
+        margin: 5px;
+        border: 1px solid #ccc;
+    }
+    p{
+        height: 50px;
+        border: 1px solid red;
+        margin: 30px;
+    }
+    .left div {
+        background: #bbffaa;
+    }
+    .right div {
+        background: yellow;
+    }
+    </style>
+    <script src="jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+    <h2>mouseover与mouseout事件</h2>
+
+    <h4>测试一</h4>
+    <button>点击：指定触发mouseover事件</button>
+    <script type="text/javascript">
+        $('h2').mouseover(function(e) {
+            alert('触发h2元素绑定的mouseover')
+        })
+        $("button:eq(0)").click(function(e) {
+            $('h2').mouseover() //指定触发绑定的事件
+        })
+>>>>>>> 883e521ac2d6ba2c863afd99ec41cb949fffa7d9
     </script>
 
 
     <h4>测试二</h4>
     <div class="left">
         <div class="aaron1">
+<<<<<<< HEAD
             <p>鼠标在绿色区域移动触发mousemove</p>
             <p>移动的X位置：</p>
         </div>
@@ -53,11 +90,24 @@
     $(".aaron1").mousemove(function(e) {
         $(this).find('p:last').html('移动的X位置：' + e.pageX)
     })
+=======
+            <p>鼠标移进此区域触发mouseover事件</p>
+            <a>进入元素内部,mouseover事件触发次数：</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var n = 0;
+        //绑定一个mouseover事件
+        $(".aaron1 p:first").mouseover(function(e) {
+            $(".aaron1 a").html('进入元素内部,mouseover事件触发次数：' + (++n))
+        })
+>>>>>>> 883e521ac2d6ba2c863afd99ec41cb949fffa7d9
     </script>
 
     
     <h4>测试三</h4>
     <div class="right">
+<<<<<<< HEAD
         <div class="aaron3">
             <p>鼠标移动：不同函数传递数据</p>
             <p>数据：</p>
@@ -73,6 +123,26 @@
         $(".right").mousemove(1111, data)
     }
     a();
+=======
+        <div class="aaron2">
+            <p>鼠标移动：不同函数传递数据</p>
+            <a>进入元素内部,mouseover事件触发次数：</a>
+        </div>
+    </div>
+    <br/>
+    <script type="text/javascript">
+        var n = 0;
+        //不同函数传递数据
+        function data(e) {
+            $(".right a").html('mouseover事件触发次数：' + (++n) + '<br/> 传入数据为 ：'+ e.data)
+        }
+
+        function a() {
+            $(".right p:first").mouseover('data = 慕课网', data)
+        }
+        a();
+
+>>>>>>> 883e521ac2d6ba2c863afd99ec41cb949fffa7d9
     </script>
 </body>
 
