@@ -5,70 +5,75 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title></title>
     <style>
-    .test2 {
+    .left div,
+    .right div {
+        width: 300px;
+        height: 80px;
+        padding: 5px;
+        margin: 5px;
+        border: 1px solid #ccc;
+    }
+    
+    .left div {
         background: #bbffaa;
     }
     
-    .test3 {
+    .right div {
         background: yellow;
     }
-    
-    .test2,
-    .test3 {
-        border: 1px solid red;
-    }
     </style>
-    </style>
-    <script src="jquery-1.9.1.min.js"></script>
+    <script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js"></script>
 </head>
 
 <body>
-    <h2>.mousedown()方法</h2>
-
+    <h2>.mousemove()方法</h2>
     <h4>测试一</h4>
-    <button>弹出回调中的鼠标键</button>
+    <button>点击：指定触发mousemove事件</button>
     <script type="text/javascript">
-    //this指向button元素
-    $("button:eq(0)").mousedown(function(e) {
-        alert('e.which: ' + e.which)
+    $('h2').mousemove(function(e) {
+        alert('触发h2元素绑定的mousemove')
+    })
+
+    $("button:eq(0)").click(function(e) {
+        $('h2').mousemove() //指定触发绑定的事件
     })
     </script>
 
 
     <h4>测试二</h4>
-    <div class="test2">
-        <p>$('button:first').mousedown(function(e) {alert(this)})</p>
+    <div class="left">
+        <div class="aaron1">
+            <p>鼠标在绿色区域移动触发mousemove</p>
+            <p>移动的X位置：</p>
+        </div>
     </div>
-    <button>指定触发事件</button>
     <script type="text/javascript">
-    $('p').mousedown(function(e) {
-            alert(e.target.textContent)
-        })
-        //this指向button元素
-    $("button:eq(1)").mousedown(function() {
-        $('p').mousedown() //指定触发绑定的事件
+    //绑定一个mousemove事件
+    //触发后修改内容
+    $(".aaron1").mousemove(function(e) {
+        $(this).find('p:last').html('移动的X位置：' + e.pageX)
     })
     </script>
 
-
+    
     <h4>测试三</h4>
-    <div class="test3">
-        <p>$('.right').mousedown(1111, set)</p>
+    <div class="right">
+        <div class="aaron3">
+            <p>鼠标移动：不同函数传递数据</p>
+            <p>数据：</p>
+        </div>
     </div>
-    <button>不同函数传递数据</button>
     <script type="text/javascript">
     //不同函数传递数据
     function data(e) {
-        alert(e.data) //1111
+        $(this).find('p:last').html('数据:' + e.data)
     }
 
     function a() {
-        $("button:eq(2)").mousedown(1111, data)
+        $(".right").mousemove(1111, data)
     }
     a();
     </script>
-
-
 </body>
 
 </html>
