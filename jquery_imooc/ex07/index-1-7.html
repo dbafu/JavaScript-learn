@@ -18,7 +18,25 @@
             </ul>
         </div>
         
-        <script type="text/javascript">
+        <script>
+            $(function(){
+                $('#btnCheck').click(function(){
+                    $.ajax({
+                        url: 'check_f.php',
+                        method: 'post',
+                        data: {"num" : $('#txtNumber').val()},
+                        dataType: 'text',
+                        success: function(data){
+                            $('ul').append('<li>你输入的<b> ' 
+                                + $('#txtNumber').val() + ' </b>是<b> '
+                                + data + ' </b></li');
+                        }
+                    });
+                });
+            });
+        </script>
+
+ <!--        <script type="text/javascript">
             $(function (){
                 $("#btnCheck").bind("click", function () {
                     $.post("check_f.php", {num: $('#txtNumber').val()},
@@ -29,6 +47,6 @@
                     });
                 })
             });
-        </script>
+        </script> -->
     </body>
 </html>
