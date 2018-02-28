@@ -21,7 +21,7 @@
         <script type="text/javascript">
             $(function (){
                 $("#btnCheck").bind("click", function () {
-                    $.post("check_f.php", {"num": $('txtNumber').val()},
+                    $.post("check_f.php", {num: $('#txtNumber').val()},
                     function (data) {
                         $("ul").append("<li>你输入的<b>  "
                         + $("#txtNumber").val() + " </b>是<b> "
