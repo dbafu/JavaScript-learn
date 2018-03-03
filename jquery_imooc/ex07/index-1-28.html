@@ -25,7 +25,7 @@
                     strTmp += "Mozilla FireFox";
                 }
                 strTmp += "<br /><br /> 版本号是：" //获取版本号
-                       +?;
+                       + $.browser.version;
                 $(".content").html(strTmp);
             });
         </script>
