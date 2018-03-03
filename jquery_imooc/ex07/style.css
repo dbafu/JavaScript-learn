@@ -1,7 +1,15 @@
 #divtest
 {
     width: 282px;
+    font-size: 13px;
 }
+p
+{
+    padding: 0px;
+    margin: 0px;
+    line-height: 23px;
+}
+
 #divtest .title
 {
     padding: 8px;
