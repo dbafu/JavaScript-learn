@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>图片放大镜插件</title>
+        <link href="jquery.jqzoom.css" rel="stylesheet" type="text/css" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="jquery.jqzoom.js"></script>
+    </head>
+
+    <body>
+        <div id="divtest">
+            <div class="title">
+                <span class="fl">图片放大镜</span>
+            </div>
+            <div class="content">
+                <a href="images/52e4aec90001924d06800599.jpg" id="jqzoom" title="小兔子乖乖">
+                     <img src="images/52e4aee700012df702130212.jpg" alt=""/>
+                </a>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(function () {
+                $('#jqzoom').jqzoom({ //绑定图片放大插件jqzoom
+                    zoomWidth: 123, //小图片所选区域的宽
+                    zoomHeight: 123, //小图片所选区域的高
+                    zoomType: 'reverse' //设置放大镜的类型
+                });
+            });
+        </script>
+    </body>
+</html>
