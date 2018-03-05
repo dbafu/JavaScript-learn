@@ -41,7 +41,6 @@
         margin-top: 300px;
       }
     </style>
-    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 </head>
 <body>
 
@@ -57,7 +56,9 @@
     <p class="progress">0%</p>
   </div>
 
-  <script type="text/javascript">
+  <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+  <script src="js/>preload.js"></script>
+  <!-- <script type="text/javascript">
     var imgs = [
       'img/0.jpg',
       'img/1.jpg',
@@ -72,7 +73,7 @@
     $.each(imgs, function (index, src) {
       var imgObj = new Image();
 
-      $(imgObj). on('load', function () {
+      $(imgObj). on('load error', function () {
         $progress.html(Math.round((count + 1) / len * 100) + '%');
 
         if (count >= len -1){
@@ -96,6 +97,6 @@
       document.title = (index + 1) + '/' + len;
       $('#img').attr('src', imgs[index]);
     });
-  </script>
+  </script> -->
 </body>
 </html>
