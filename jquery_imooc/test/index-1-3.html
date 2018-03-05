@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-1.11.3.js"></script>
+</head>
+<body>
+	<a href="https://www.baidu.com">百度</a>
+	<a href="http://www.qq.com">QQ</a>
+	<script>
+		$(function(){
+			// alert(typeof(document.querySelector("a")));
+			console.log(document.querySelector('a'));
+			console.log(document.querySelectorAll('a')[1]);
+			$('a').get(0).click();
+			// document.querySelectorAll('a')[1].click();
+		});
+	</script>
+</body>
+</html>
