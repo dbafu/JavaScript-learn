@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 # JavaScript-learn
 记录JavaScript 学习 过程
 
-## CTOLib javascript 文档 
+## CTOLib javascript 文档
 <https://www.ctolib.com/javascript/docs/javascript-pg-4.html>
 
 ### Learn Javascript 中文版
@@ -19,7 +18,7 @@
 # JavaScript-learn
 记录JavaScript 学习 过程
 
-## CTOLib javascript 文档 
+## CTOLib javascript 文档
 <https://www.ctolib.com/javascript/docs/javascript-pg-4.html>
 
 ### Learn Javascript 中文版
@@ -42,4 +41,7 @@
 
 以上内容于 2018年03月04日22:10:06 已经学习完毕
 
->>>>>>> 252f3d146a8dc177df6969df9aa86eec44628927
+### echarts3.0 学习 （慕课网）
+
+[Echarts3.0入门基础与实战](https://www.imooc.com/learn/687)
+
