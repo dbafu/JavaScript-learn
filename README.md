@@ -45,3 +45,38 @@
 
 [Echarts3.0入门基础与实战](https://www.imooc.com/learn/687)
 
+### Angular-cli基础
+[Angular-cli基础](https://www.imooc.com/learn/851)   : 2018年03月10日16:58:30
+
+#### 开始一个 angular 之路:
+>* 安装 Nodejs, nodejs自带 npm (推荐去 nodejs 官网安装最新的 Lts 稳定版,不要安装版本号最高最新版)
+>* 安装 `cnpm`
+   
+ ```
+ npm install -g cnpm --registry=https://registry.npm.taobao.org
+ ```
+
+>* 全局安装 `angular/cli`
+ 
+```
+cnpm install -g @angular/cli
+```
+>* 查看是否安装成功
+
+```
+ng version
+```
+#### 新建一个 angular 项目
+
+```
+ng new demo01 --skip-install
+cd demo01
+cnpm install    # 安装依赖
+ng serve        # 起一个服务器以预览, 访问地址是 localhost:4200
+```
+
+>--skip-install 不是使用 `npm` 安装依赖,使用 `cnpm`
+
+
+
+
