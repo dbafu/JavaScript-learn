@@ -48,6 +48,9 @@
 ### Angular-cli基础
 [Angular-cli基础](https://www.imooc.com/learn/851)   : 2018年03月10日16:58:30
 
+Angular JS 英文教程  英雄之路 
+[Tutorial: Tour of Heroes](https://angular.io/tutorial) : <https://angular.io/tutorial>
+
 #### 开始一个 angular 之路:
 >* 安装 Nodejs, nodejs自带 npm (推荐去 nodejs 官网安装最新的 Lts 稳定版,不要安装版本号最高最新版)
 >* 安装 `cnpm`
@@ -76,6 +79,10 @@ ng serve        # 起一个服务器以预览, 访问地址是 localhost:4200
 ```
 
 >--skip-install 不是使用 `npm` 安装依赖,使用 `cnpm`
+> 使用 `ng serve --port 8080` 可以指定服务端口,避免端口冲突,达到服务器多开的效果. 默认端口是`4200`
+
+### Angular2一小时快速入门
+Angular2一小时快速入门 <https://www.imooc.com/learn/789>   : 2018年03月10日22:26:11
 
 
 
