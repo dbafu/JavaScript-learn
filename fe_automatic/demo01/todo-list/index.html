@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="TodoList">
+
+<head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container" ng-controller="TodosController">
+        <div class="todos list-group">
+            <div class="list-group-item todo" ng-repeat="todo in todos track by $index" ng-controller="TodoController"><span>{{todo.name}}</span>
+                <button class="close" type="button" aria-label="close" ng-click="deleteTodo(todo)"><span aria-hidden="true">&time;</span></button>
+            </div>
+        </div>
+        <div class="input-group" ng-controller="AddTodoController">
+            <input type="text" class="form-control" placeholder="New Todo" ng-model="newTodo"><span class="input-group-btn"><button class="btn btn-default" type="button" ng-click="addTodo(newTodo)">ADD</button></span></div>
+    </div>
+
+    
+</body>
+
+</html>
