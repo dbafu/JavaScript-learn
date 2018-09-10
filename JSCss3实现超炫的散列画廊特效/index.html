@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>海报画廊</title>
+  <style>
+    *{padding: 0;margin: 0;}
+    body{
+      background-color: #ffffff;
+      color: #555555;
+      font-family: 'Avenir Next', 'Lantinghei SC';
+      font-size: 14px;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap{
+      width: 100%;
+      height: 600px;
+      position: absolute;
+      top: 50%;
+      margin-top: -300px;
+      background-color: #333333;
+      overflow: hidden;
+      -webkit-perspective: 800px;
+    }
+    /* 海报样式 */
+    .photo{
+      width: 260px;
+      height: 320px;
+      position: absolute;
+      z-index: 1;
+      box-shadow: 0 0 1px rgba(0, 0, 0, .01)
+    }
+    .photo .side{
+      width: 100%;
+      height: 100%;
+      background-color: #eeeeee;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .photo .side-front{
+
+    }
+    .photo .side-front .image {
+      width: 100%;
+      height: 250px;
+      line-height: 250px;
+      overflow: hidden;
+    }
+    .photo .side-front .image img{
+      width: 100%;
+    }
+    .photo .side-front .caption{
+      text-align: center;
+      font-size: 16px;
+      line-height: 50px;
+    }
+    .photo .side-back{
+    }
+    .photo .side-back .desc{
+      color: #666666;
+      font-size: 14px;
+      line-height: 1.5rem;
+    }
+
+    /* 当前选中的海报样式 */
+    .photo_center{
+      left: 50%;
+      top: 50%;
+      margin: -160px 0 0 -130px;
+      z-index: 999;
+    }
+    /* 负责翻转 */
+    .photo_wrap{
+      position: absolute;width: 100%;height: 100%;
+
+      -webkit-transform-style: preserve-3d;
+      -webkit-transition: all .6s;
+    }
+    .photo_wrap .side-front{
+      -webkit-transform: rotateX(0deg);
+    }
+    .photo_wrap .side-back{
+      -webkit-transform: rotateY(180deg);
+    }
+    .photo_wrap .side{
+      -webkit-backface-visibility: hidden;
+    }
+    .photo_front .photo_wrap{
+      -webkit-transform: rotateY(0deg);
+    }
+    .photo_back .photo_wrap{
+      -webkit-transform: rotateY(180deg)
+    }
+  </style>
+</head>
+<body onselectstart="return false">
+  <div class="wrap">
+    <!-- photo 负责平移、旋转 -->
+    <div class="photo photo_center photo_front" onclick="turn(this)">
+      <!-- photo_wrap 负责 3D 翻转 -->
+      <div class="photo_wrap">
+        <div class="side side-front">
+          <p class="image">
+            <img src="ms.png" alt="md">
+          </p>
+          <p class="caption">麦兜我和我妈妈</p>
+        </div>
+        <div class="side side-back">
+          <p class="desc">描述信息</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    //  1 翻面控制
+    function turn(ele) {
+      var cls = ele.className;
+      if (/photo_front/.test(cls)) {
+        cls = cls.replace(/photo_front/, 'photo_back')
+      } else {
+        cls = cls.replace(/photo_back/, 'photo_front')
+      }
+      return ele.className = cls
+    }
+  </script>
+</body>
+</html>

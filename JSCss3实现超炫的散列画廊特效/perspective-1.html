@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Perspective-3D</title>
+  <style>
+    div{
+      position: relative;border: 1px solid #000;
+    }
+    #wrap{
+      width: 250px;
+      height: 150px;
+      margin: 50px;padding: 50px;
+      -webkit-perspective: 800px;  /* 子元素获得3D元素支持，这里是设置子元素距离视图的位置 */
+    }
+    #photo{
+      padding: 50px;
+      background: yellow;
+      -webkit-transform: rotateY(45deg)
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="photo">我是 rotateY 45deg</div>
+  </div>
+</body>
+</html>
